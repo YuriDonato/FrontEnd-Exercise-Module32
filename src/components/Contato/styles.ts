@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Botao } from "../../styles";
-import variables from "../../styles/variables";
+import styled from 'styled-components'
+import { Botao } from '../../styles'
+import variables from '../../styles/variables'
 
 export const CardContato = styled.div`
   display: block;
@@ -15,7 +15,7 @@ export const CardContato = styled.div`
     width: 48px;
     height: 48px;
   }
-`;
+`
 
 export const ContainerStatus = styled.div`
   display: flex;
@@ -26,26 +26,26 @@ export const ContainerStatus = styled.div`
       font-weight: bold;
     }
   }
-`;
+`
 
 export const ContainerButtons = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
-`;
+`
 
 export const BotaoDeletarECancelar = styled(Botao)`
   background-color: ${variables.vermelho};
-`;
+`
 
 export const BotaoEditar = styled(Botao)`
   background-color: ${variables.amarelo};
-`;
+`
 
 export const BotaoSalvar = styled(Botao)`
   background-color: green;
-`;
+`
 
 export const Descricao = styled.textarea`
   display: inline-block;
@@ -54,4 +54,4 @@ export const Descricao = styled.textarea`
   border: none;
   background-color: transparent;
   margin-left: 12px;
-`;
+`

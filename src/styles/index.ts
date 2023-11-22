@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
-import variables from "./variables";
+import styled, { createGlobalStyle } from 'styled-components'
+import variables from './variables'
 
 const EstiloGlobal = createGlobalStyle`
 * {
@@ -9,7 +9,7 @@ const EstiloGlobal = createGlobalStyle`
     font-family: Roboto, sans-serif;
     list-style: none;
 }
-`;
+`
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -19,7 +19,7 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-`;
+`
 
 export const Campo = styled.input`
   padding: 8px;
@@ -30,7 +30,7 @@ export const Campo = styled.input`
   border: 1px solid #666666;
   border-radius: 8px;
   color: #666666;
-`;
+`
 
 export const Botao = styled.button`
   text-transform: capitalize;
@@ -43,6 +43,6 @@ export const Botao = styled.button`
 
   border: none;
   border-radius: 4px;
-`;
+`
 
-export default EstiloGlobal;
+export default EstiloGlobal

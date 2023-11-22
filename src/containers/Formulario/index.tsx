@@ -1,27 +1,28 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Botao, Campo } from "../../styles";
-import * as S from "./styles";
-import { RootReducer } from "../../store";
-import { cadastrar } from "../../store/reducers/contatos";
-import { FormEvent, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { Botao, Campo } from '../../styles'
+import * as S from './styles'
+import { RootReducer } from '../../store'
+import { cadastrar } from '../../store/reducers/contatos'
+import { FormEvent, useState } from 'react'
 
 const Formulario = () => {
   const dispatch = useDispatch()
-  const { itens } = useSelector((state: RootReducer) => state.contatos);
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
 
   const [name, setName] = useState('')
   const [tell, setTell] = useState('')
   const [email, setEmail] = useState('')
 
-
   const cadastrarContato = (event: FormEvent) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    dispatch(cadastrar({
-      name,
-      email,
-      tell
-    }))
+    dispatch(
+      cadastrar({
+        name,
+        email,
+        tell
+      })
+    )
   }
 
   const limparCampos = () => {
@@ -39,13 +40,33 @@ const Formulario = () => {
         <h2>{itens.length} contatos na agenda</h2>
       </S.Header>
       <S.Form onSubmit={cadastrarContato}>
-        <Campo value={name} onChange={(event) => setName(event.target.value)} type="text" placeholder="Nome" required />
-        <Campo value={tell} onChange={(event) => setTell(event.target.value)} type="text" placeholder="Telefone" required />
-        <Campo value={email} onChange={(event) => setEmail(event.target.value)} type="email" placeholder="E-mail" required />
-          <Botao onClick={limparCampos} type="submit">ADICIONAR</Botao>
+        <Campo
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          type="text"
+          placeholder="Nome"
+          required
+        />
+        <Campo
+          value={tell}
+          onChange={(event) => setTell(event.target.value)}
+          type="text"
+          placeholder="Telefone"
+          required
+        />
+        <Campo
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          type="email"
+          placeholder="E-mail"
+          required
+        />
+        <Botao onClick={limparCampos} type="submit">
+          ADICIONAR
+        </Botao>
       </S.Form>
     </>
-  );
-};
+  )
+}
 
-export default Formulario;
+export default Formulario

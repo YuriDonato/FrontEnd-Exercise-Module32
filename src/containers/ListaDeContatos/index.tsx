@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
-import { RootReducer } from "../../store";
-import Contato from "../../components/Contato";
-import { MainContainer } from "./styles";
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import Contato from '../../components/Contato'
+import { MainContainer } from './styles'
 
 const ListaDeContatos = () => {
-  const { itens } = useSelector((state: RootReducer) => state.contatos);
+  const { itens } = useSelector((state: RootReducer) => state.contatos)
 
   return (
     <MainContainer>
@@ -16,7 +16,7 @@ const ListaDeContatos = () => {
         ))}
       </ul>
     </MainContainer>
-  );
-};
+  )
+}
 
-export default ListaDeContatos;
+export default ListaDeContatos
