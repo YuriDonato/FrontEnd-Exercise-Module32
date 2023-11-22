@@ -50,10 +50,11 @@ const Formulario = () => {
         <Campo
           value={tell}
           onChange={(event) => setTell(event.target.value)}
-          type="text"
+          type="number"
           placeholder="Telefone"
           required
         />
+        input:
         <Campo
           value={email}
           onChange={(event) => setEmail(event.target.value)}
